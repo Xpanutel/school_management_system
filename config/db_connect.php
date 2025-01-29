@@ -1,6 +1,6 @@
 <?php
 
-class DBconnect 
+class DataBaseConnect 
 {
     public function dbConnect(string $host, string $user, string $pass, string $dbname): ?mysqli
     {

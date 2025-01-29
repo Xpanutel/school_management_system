@@ -5,7 +5,8 @@ require_once 'config/db_connect.php';
 // конфиг с данными для подключения к бд
 require_once 'dbconfig.php';
 
-$dbconnect = new DBconnect(host, user, pass, dbname);
+$dbconnect = new DataBaseConnect();
+$dbconnect->dbConnect(host, user, pass, dbname);
 
 if($dbconnect) {
     echo "Подключение успешно";
