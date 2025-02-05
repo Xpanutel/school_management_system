@@ -11,8 +11,7 @@ $router = new Router();
 $dbconnect = new DataBaseConnect();
 $dbconnect->dbConnect(host, user, pass, dbname);
 
-if($dbconnect) {
-    // маршруты - геттеры
+if ($dbconnect) {
     include "router/get.php";
 
     $router->resolve();

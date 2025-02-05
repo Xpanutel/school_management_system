@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Профиль учителя</title>
-    <link rel="stylesheet" href="src/css/teacher_profile.css">
-    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="/app/src/css/teacher_profile.css">
+    <link rel="stylesheet" href="/app/src/css/header.css">
 </head>
 <body>
     <header>

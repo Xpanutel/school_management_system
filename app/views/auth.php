@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вход в систему</title>
-    <link rel="stylesheet" href="src/css/index.css">
-    <link rel="stylesheet" href="src/css/auth.css">
-    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="/app/src/css/index.css">
+    <link rel="stylesheet" href="/app/src/css/auth.css">
+    <link rel="stylesheet" href="/app/src/css/header.css">
 </head>
 <body>
     <header>
@@ -40,6 +40,6 @@
         <p>&copy; 2025 Управление школой</p>
     </footer>
     
-    <script src="src/js/password.js"></script>
+    <script src="/app/src/js/password.js"></script>
 </body>
 </html>

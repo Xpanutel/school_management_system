@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сброс пароля</title>
-    <link rel="stylesheet" href="src/css/password.css">
-    <link rel="stylesheet" href="src/css/index.css">
-    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="/app/src/css/password.css">
+    <link rel="stylesheet" href="/app/src/css/index.css">
+    <link rel="stylesheet" href="/app/src/css/header.css">
 </head>
 <body>
     <header>

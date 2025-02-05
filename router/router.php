@@ -16,6 +16,18 @@ class Router {
         $this->routes['POST'][$path] = $handler;
     }
 
+    // Преобразуем путь в регулярное выражение для проверки
+    private function convertToRegex(string $path): string {
+        // Заменяем параметры в фигурных скобках на регулярные выражения
+        return '#^' . preg_replace('/{(\w+)}/', '([^/]+)', $path) . '$#';
+    }
+
+    // Обработка ошибки 404
+    private function handleNotFound(): void {
+        http_response_code(404); // Устанавливаем статус 404
+        echo "404 Not Found"; // Выводим сообщение об ошибке
+    }
+
     // Метод для обработки входящих запросов
     public function resolve(): void {
         // Получаем метод запроса (GET или POST)
@@ -37,17 +49,5 @@ class Router {
 
         // Если маршрут не найден, обрабатываем ошибку 404
         $this->handleNotFound();
-    }
-
-    // Преобразуем путь в регулярное выражение для проверки
-    private function convertToRegex(string $path): string {
-        // Заменяем параметры в фигурных скобках на регулярные выражения
-        return '#^' . preg_replace('/{(\w+)}/', '([^/]+)', $path) . '$#';
-    }
-
-    // Обработка ошибки 404
-    private function handleNotFound(): void {
-        http_response_code(404); // Устанавливаем статус 404
-        echo "404 Not Found"; // Выводим сообщение об ошибке
     }
 }

@@ -1,29 +1,14 @@
 <?php
 
-/**
- * Class UserController
- * Контроллер для управления пользователями (студентами).
- */
 class UserController
 {
     private $userModel;
 
-    /**
-     * UserController constructor.
-     * 
-     * @param Student $userModel Модель для работы с данными студентов.
-     */
     public function __construct($userModel)
     {
         $this->userModel = $userModel;
     }
 
-    /**
-     * Добавляет нового студента.
-     * 
-     * @param array $request Данные студента для добавления.
-     * @throws \Throwable Если произошла ошибка при добавлении студента.
-     */
     public function addStudent(array $request): void 
     {   
         try {
@@ -39,12 +24,6 @@ class UserController
         }
     }
 
-    /**
-     * Получает всех студентов.
-     * 
-     * @return array Список всех студентов.
-     * @throws \Throwable Если произошла ошибка при получении студентов.
-     */
     public function getAllStudents(): array
     {
         try {
@@ -54,17 +33,19 @@ class UserController
         }
     }
 
-    /**
-     * Получает студента по ID.
-     * 
-     * @param int $id Уникальный идентификатор студента.
-     * @return array Данные студента.
-     * @throws \Throwable Если произошла ошибка при получении студента.
-     */
     public function getStudentById(int $id): array
     {
         try {
             return $this->userModel->getStudentById($id);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
+
+    public function getSheduleByStudent(): array
+    {
+        try {
+            return $this->userModel->getSheduleByStudent();
         } catch (\Throwable $th) {
             throw $th;
         }
